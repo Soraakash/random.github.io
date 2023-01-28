@@ -1,0 +1,48 @@
+<%- include('header'); -%>
+    <!--Main Content Area-->
+    <div class="main">
+      <div class="info-container">
+        <div class="devInfo">
+          <div class="hello">
+            <h1>Hey There !!</h1>
+          </div>
+          <div class="myname">
+            <h2>
+              <span class="myself"> I'm </span>
+              <span class="auto-input"></span>
+            </h2>
+          </div>
+          <div class="moreabout">
+            <p>
+              You can reach out to me if you need any help in making website for
+              you or your business.
+            </p>
+          </div>
+          <div class="devbuttons">
+            <a href="/testcontact.html"><button class="bt1">Contact Me</button></a>
+            <a href="/resume.pdf" target="_blank"
+              ><button class="bt2">Download CV</button></a
+            >
+          </div>
+        </div>
+        <div class="devPic">
+          <img src="images/akash.png" />
+          <div class="pattern">
+            <img src="images/pattern2.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script>
+      var typed = new Typed(".auto-input", {  
+      strings: ["Akash Kumar", "Web Developer", "Programmer", "Designer"],  
+        typeSpeed: 100, 
+        backSpeed: 100, 
+        loop: true, 
+      }); 
+
+    </script>
+<%- include('footer'); -%>
+    

@@ -1,0 +1,222 @@
+@import url("https://fonts.googleapis.com/css2?family=Alice&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alice&family=Mulish:wght@200;300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html{
+    overflow-x: hidden;
+}
+
+/* Scrollbar Styling */
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #a6a2a3;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #c06c84;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #cd5c7c;
+}
+:root {
+  --primary-color: #fff;
+  --secondary-color: #453c67;
+  --tertiary-color: #efbdca;
+  --fourth-color:#1e2022;
+}
+
+.dark-theme {
+  --primary-color: #1e2022;
+  --secondary-color: #a1aab1;
+  --tertiary-color:#303131;
+  --fourth-color:#a1aab1;
+}
+body {
+  background-color: var(--primary-color);
+  /* overflow-x:hidden  ; */
+}
+
+.sidebr {
+  font-family: "Alice", serif;
+  font-family: "Mulish", sans-serif;
+  width: 100vw;
+  box-shadow: #e2577e;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.sidebr nav ul {
+  display: flex;
+}
+.sidebr nav li {
+  list-style: none;
+  font-size: 15px;
+  padding: 30px;
+}
+.sidebr nav li a:hover {
+  color: #e2577e;
+}
+.sidebr nav li a {
+  text-decoration: none;
+  font-size: 22px;
+  /* font-weight: 400; */
+  color: var(--secondary-color);
+  padding: 25px 0px;
+}
+.icoon i {
+  font-size: 25px;
+  color: var(--secondary-color);
+  cursor: pointer;
+}
+
+.main {
+  font-family: "Alice", serif;
+  font-family: "Mulish", sans-serif;
+  display: flex;
+  width: 100vw;
+  flex-direction: column;
+  /* background-color: skyblue; */
+  /* border: 1px solid red; */
+  justify-content: space-around;
+  align-items: center;
+}
+.akash h1 {
+  color: var(--secondary-color);
+  font-weight: 400;
+  /* color: #e19caf; */
+}
+h1 .ak{
+  color:#e2577e;
+}
+.main div.header h1 {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  font-weight: 300;
+  font-family: "Mulish", sans-serif;
+  color: #e2577e;
+  padding: 15px;
+  font-size: 60px;
+}
+.sub-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  /* background: #313131; */
+  width: 100vw;
+}
+
+.first-row-project {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1200px;
+  flex-wrap: wrap;
+}
+
+.first-row-project .card {
+  position: relative;
+  width: 320px;
+  padding: 30px;
+  margin: 20px;
+  /* background:  #CB1C8D; */
+  background-color: var(--tertiary-color);
+}
+
+.card:hover {
+  transition: 0.75s;
+  transform: translateY(-15px);
+}
+
+.card.card.active:hover {
+  box-shadow: none;
+  transition: 0.75s;
+  transform: translateY(-15px);
+}
+
+.first-row-project .card .card-header h1 {
+  margin-bottom: 10px;
+  color: #e2577e;
+  font-size: 50px;
+  font-weight: 400;
+}
+.content span {
+  color: var(--fourth-color);
+  font-size: 15px;
+  font-weight: 500;
+}
+.content p {
+  color: var(--fourth-color);
+  padding: 5px;
+}
+
+.first-row-project .card.active .content {
+  height: auto;
+}
+.first-row-project .card .content {
+  position: realative;
+  height: 215px;
+  overflow: hidden;
+}
+.first-row-project .card .content::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  /* background: linear-gradient(transparent, var(--fourth-color)); */
+  /* background: linear-gradient(transparent, #CC9544); */
+}
+
+.first-row-project .card.active .content::before {
+  display: none;
+}
+.first-row-project .card .content h3 {
+  color: #fff;
+  font-size: 1.4 rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.first-row-project .card .content p {
+  font-weight: 300;
+  color: var(--fourth-color);
+}
+
+.first-row-project .card .more {
+  position: relative;
+  padding: 10px 15px;
+  background: #e2577e;
+  cursor: pointer;
+  margin-top: 15px;
+  display: inline-block;
+  /* font-weight: 300; */
+  color: #1e2022;
+}
+
+.first-row-project .card.active .more {
+  background: #e2577e;
+  cursor: pointer;
+  font-weight: 300;
+  color: #fff;
+}
+.first-row-project .card .more::before {
+  content: "Read more";
+}
+
+.first-row-project .card.active .more::before {
+  content: "Read less";
+}
